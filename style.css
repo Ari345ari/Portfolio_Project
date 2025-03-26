@@ -1,0 +1,487 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.navbar {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.3s ease;
+  transform: translateY(0);
+  z-index: 1000;
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar a.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+#hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-img-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 1.5rem;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.profile-img {
+  border: 5px solid #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: pulse 2s infinite;
+}
+
+.skills-section {
+  background-color: #adadad;
+  padding: 100px 0;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin-top: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-card {
+  background-color: rgba(20, 25, 55, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  text-align: center;
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-text {
+  color: #666;
+}
+
+.bi {
+  font-size: 2.5rem;
+  color: #3498db;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+  transition: color 0.3s ease !important;
+}
+
+.btn-glow {
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+}
+
+#mission-section {
+  min-height: 100vh;
+}
+
+#mission-section .section-title,
+#mission-section .lead {
+  transition: color 0.3s ease !important;
+}
+
+#mission-section .lead:hover {
+  color: #ff6347 !important;
+}
+
+#hero-section,
+#mission-section,
+#skills-section,
+#contact-section,
+#carousel-section {
+  position: relative;
+  background-image: url("img/jellyfishes-multicolor-black-background-underwater-colorful-3648x2266-2139.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+
+#hero-section::before,
+#mission-section::before,
+#skills-section::before,
+#contact-section::before #carousel-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#hero-section .container,
+#mission-section .container,
+#skills-section .container,
+#contact-section .container,
+#carousel-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+#mission-section,
+#skills-section,
+#contact-section,
+#carousel-section {
+  color: #aba4a4;
+}
+
+#skills-section .section-title,
+#skills-section .card-title,
+#skills-section .card-text {
+  color: white !important;
+}
+
+#contact-section .section-title,
+#contact-section .lead {
+  color: white !important;
+}
+
+#contact-section .btn {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+#contact-section .btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.skill-card .card-title,
+.skill-card .card-text {
+  color: white !important;
+}
+
+.mission-image-container {
+  padding: 15px;
+  max-width: 80%;
+  transform: translateX(100px);
+  padding-right: 60px;
+}
+
+.mission-image-container img {
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.mission-image-container img:hover {
+  transform: scale(1.02);
+}
+
+.scroll-indicator {
+  position: center;
+  bottom: -100px;
+  left: 100%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mouse {
+  display: none;
+}
+
+.arrow-scroll span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+  margin-bottom: 5px;
+  animation: arrow 2s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    top: 10px;
+  }
+  100% {
+    opacity: 0;
+    top: 30px;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 35px rgb(24, 171, 139);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.mission-image-container img {
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.mission-image-container img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .mission-image-container {
+    max-width: 100%;
+    transform: translateX(0);
+    padding-right: 15px;
+    text-align: center;
+  }
+
+  .mission-image-container img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .mission-image-container {
+    max-width: 100%;
+    transform: translateX(0);
+    padding-right: 15px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .mission-image-container img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    position: relative;
+    top: 0;
+    margin-top: 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #contact-section .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact-section .btn {
+    margin: 10px auto;
+    width: 80%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .mission-image-container {
+    max-width: 100%;
+    transform: translateX(0);
+    padding-right: 15px;
+    text-align: center;
+  }
+
+  .mission-image-container img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  #mission-section {
+    min-height: auto;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mission-image-container {
+    max-width: 100%;
+    transform: translateX(0);
+    padding-right: 15px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .mission-image-container img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  #mission-section {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    position: relative;
+    top: 0;
+    margin-top: 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #contact-section .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact-section .btn {
+    margin: 10px auto;
+    width: 80%;
+    max-width: 250px;
+  }
+}
+
+#inspirationCarousel {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#inspirationCarousel .carousel-item {
+  height: 500px;
+}
+
+#inspirationCarousel .carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption {
+  border-radius: 10px;
+  padding: 15px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  max-width: 400px;
+  max-height: 600px;
+}
+
+.carousel-caption h5 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  #inspirationCarousel .carousel-item {
+    height: 300px;
+  }
+
+  .carousel-caption {
+    width: 90%;
+    padding: 10px;
+  }
+}
